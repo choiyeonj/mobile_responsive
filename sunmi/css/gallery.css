@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    height: 100px;
+    background-color: #F07B3F;
+}
+
+.header h1 {
+    line-height: 85px;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 img {
+    width: 150px;
+    height: 66px;
+    vertical-align: middle;
+}
+
+
+/* -----------------lnb------------------- */
+#lnb_chk {
+    display: none;
+}
+
+#lnb_chk:checked~.inb_ham_menu {
+    display: block;
+}
+
+#lnb_chk~.inb_ham_menu {
+    display: none;
+}
+
+#lnb_chk:checked~.label .open_inb {
+    display: none;
+}
+
+#lnb_chk:checked~.label .close_inb {
+    display: block;
+}
+
+#lnb_chk~.label .open_inb {
+    display: block;
+}
+
+#lnb_chk~.label .close_inb {
+    display: none;
+}
+
+.label {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+
+.label label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+
+.label label i {
+    font-size: 25px;
+}
+
+.inb_ham_menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 9999;
+}
+
+.inb_ham_menu li {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #f07a3fce;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* -----------------lnb_web------------------- */
+.lnb_web_outer {
+    display: none;
+}
+
+.lnb_web_menu {
+    overflow: hidden;
+}
+
+.lnb_web_menu li {
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FEFFDE;
+    text-align: center;
+    float: left;
+}
+
+.lnb_web_menu li a {
+    color: #F07B3F;
+}
+
+@media all and (min-width:601px) {
+    #lnb_chk~.label .open_inb {
+        display: none;
+    }
+
+    .lnb_web_outer {
+        display: block;
+    }
+}
+
+
+/* -----------------photo------------------- */
+#album_chk1,#album_chk2,#album_chk3,#album_chk4,
+#album_chk5,#album_chk6,#album_chk7,#album_chk8,
+#album_chk9,#album_chk10,#album_chk11,
+#photo_chk1,#photo_chk2,#photo_chk3,#photo_chk4,
+#photo_chk5,#photo_chk6,#photo_chk7,#photo_chk8,
+#photo_chk9,#photo_chk10,#photo_chk11
+{display: none;}
+
+
+#album_chk1:checked ~ .label_1 img, 
+#album_chk2:checked ~ .label_2 img, 
+#album_chk3:checked ~ .label_3 img, 
+#album_chk4:checked ~ .label_4 img, 
+#album_chk5:checked ~ .label_5 img, 
+#album_chk6:checked ~ .label_6 img, 
+#album_chk7:checked ~ .label_7 img, 
+#album_chk8:checked ~ .label_8 img, 
+#album_chk9:checked ~ .label_9 img, 
+#album_chk10:checked ~ .label_10 img, 
+#album_chk11:checked ~ .label_11 img 
+ {
+    width: 100%; height: 100%;
+}
+
+#photo_chk1:checked ~ .label_01 img,
+#photo_chk2:checked ~ .label_02 img,
+#photo_chk3:checked ~ .label_03 img,
+#photo_chk4:checked ~ .label_04 img,
+#photo_chk5:checked ~ .label_05 img,
+#photo_chk6:checked ~ .label_06 img,
+#photo_chk7:checked ~ .label_07 img,
+#photo_chk8:checked ~ .label_08 img,
+#photo_chk9:checked ~ .label_09 img
+ {
+    width: 100%; height: 100%;
+}
+
+
+
+.photo_wrap p{
+    margin: 20px 0;
+    margin-left: 5px;
+    border-bottom: 1px solid #F07B3F;
+    font-size: 17px;
+    transform: skew(-15deg);
+}
+
+.photo_wrap{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.photo_wrap .cover {
+    float: left;
+}
+
+.photo .photo_wrap .cover img{
+    width: 25%;
+    display: block;
+    float: left;
+}
+
+@media all and (min-width:321px) and (orientation:landscape) {
+    .photo_wrap .cover {
+        width: 50%;
+        float: left;
+    }
+}
+
+
+
+/* -----------------footer------------------- */
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #FEFFDE;
+}
+
+.footer .home {
+    position: relative;
+    height: 50px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.footer .home a {
+    width: 40px;
+    height: 40px;
+    background-color: #F07B3F;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+
+.footer .home a i {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.footer .home a.insta{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 5px;
+    left: 45px;
+}
+
+.footer .home a.insta img{
+    width: 40px;
+    height: 40px;
+}
+
+.footer .home a.weverse{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 5px;
+    right: 87px;
+}
+
+.footer .home a.weverse img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
